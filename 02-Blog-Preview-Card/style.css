@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+      /* Colors */
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+    background-color: var(--yellow);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Figtree;
+}
+
+.card {
+    width: 100%;
+    max-width: 384px;
+    height: 100vh;
+    max-height: 522px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-950);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 8px 8px 0 0 #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card-img {
+    border-radius: 10px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;  
+}
+
+.category {
+    background-color: var(--yellow);
+    padding: 4px 12px;
+    border-radius: 4px;
+    width: 82px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 150%;
+}
+
+.publish-date {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 150%;
+}
+
+.title:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.description {
+    color: var(--gray-500);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.profile {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.profile-img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    color: var(--gray-950);
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 800;
+}
