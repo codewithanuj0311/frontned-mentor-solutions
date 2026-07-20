@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+
+}
+
+body {
+    background-color: var(--grey-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Inter;
+
+}
+
+.card {
+    width: 100%;
+    max-width: 340px;
+    background-color: var(--grey-800);
+    border-radius: 0.625rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img {
+    border-radius: 50%;
+    max-width: 80px;
+    height: 80px;
+}
+
+.title {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.address {
+    color: var(--green);
+    font-size: 0.875rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.role {
+    color: var(--white);
+    font-size: 0.875rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.profiles a {
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 12px 80px;
+    background-color: var(--grey-700);
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    
+}
+
+.profiles a:hover {
+    background-color: var(--green);
+    color: var(--grey-900);
+    transition: 0.5s;
+}
