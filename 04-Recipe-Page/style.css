@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* White */
+    --white: hsl(0, 0%, 100%);
+
+    /* Stone */
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+  
+    /* Brown */
+    --brown-800: hsl(14, 45%, 36%);
+  
+    /* Rose */
+    --rose-50: hsl(330, 100%, 98%);
+    --rose-800: hsl(332, 51%, 32%);
+  }
+
+body {
+    background-color: var(--stone-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 6rem 0;
+    font-size: 16px;
+}
+
+.card {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 40%;
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.recipe-img {
+    width: 100%;
+    border-radius: 0.625rem;
+}
+
+.recipe-name {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--stone-900);
+    font-size: 2.5rem;
+}
+
+.recipe-description {
+    font-family: "Outfit", sans-serif;
+    color: var(--stone-600);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.recipe-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.recipe-preparation {
+    background-color: var(--rose-50);
+    padding: 1.75rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.prep-time-title {
+    font-family: "Outfit", sans-serif;
+    color: var(--rose-800);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.time-distribution {
+    padding-left: 1.75rem;
+}
+
+.time-distribution li::marker {
+    font-size: small;
+    color: var(--rose-800);
+}
+
+.time-distribution li {
+    margin-bottom: 0.75rem;
+    font-family: "Outfit", sans-serif;
+    color: var(--stone-600);
+    font-weight: 400;
+    font-size: 1rem;
+}
+.time-distribution span {
+    padding-left: .75rem;
+    color: var(--stone-600);
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+}
+
+.ingredients-title,
+.instructions-title,
+.nutrition-title {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--brown-800);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.ingredients-list,
+.instructions-list {
+    padding-left: 1.5rem;
+}
+
+.ingredients-list li::marker,
+.instructions-list li::marker {
+    font-size: small;
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+.ingredients-list li,
+.instructions-list li,
+.recipe-nutrition p {
+    padding-left: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-family: "Outfit", sans-serif;
+    color: var(--stone-600);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.instructions-list strong {
+    color: var(--stone-600);
+}
+
+.horizontal-border {
+    border: 0.5px solid var(--stone-150);
+}
+
+.nutrition-table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 20px;
+}
+
+tr {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+tr:last-child {
+    border: none;
+}
+
+td.nutrient {
+    padding: 0.625rem 0 0.625rem 1.75rem;
+    font-family: "Outfit", sans-serif;
+    color: var(--stone-600);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+td.value {
+    padding-right: 2rem;
+    font-family: "Outfit", sans-serif;
+    color: var(--brown-800);
+    font-weight: 600;
+}
+/* ==========================================
+   Mobile Devices (up to 560px)
+========================================== */
+@media screen and (max-width: 560px) {
+    body {
+        padding: 0;
+    }
+
+    .card {
+        max-width: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    .card .recipe-name,
+    .card .recipe-description {
+        padding: 0 2.5rem;
+    }
+
+    .card .recipe-name {
+        font-size: 2rem;
+    }
+
+    .recipe-overview {
+        padding: 0 2.5rem 2.5rem;
+    }
+
+    .recipe-img {
+        border-radius: 0;
+    }
+}
+
+/* ==========================================
+   Tablets & Small Laptops (561px - 758px)
+========================================== */
+@media screen and (min-width: 560px) and (max-width: 758px) {
+
+    .card {
+        max-width: 60%;
+    }
+
+    .card .recipe-name {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================
+   Laptops & Desktops (759px - 1400px)
+========================================== */
+@media screen and (min-width: 758px) and (max-width: 1400px) {
+
+    .card {
+        max-width: 50%;
+    }
+
+    .card .recipe-name {
+        font-size: 2rem;
+    }
+}
+    
+
+
+
