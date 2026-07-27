@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Primary Colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+  
+    /* Neutral Colors */
+    --grey-500: hsl(234, 12%, 34%);
+    --grey-400: hsl(212, 6%, 44%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font Family */
+    --poppins: "Poppins", sans-serif;
+  }
+
+  html {
+    font-family: var(--poppins);
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--white);
+    gap: 4rem;
+    padding: 4rem 2rem;
+
+  }
+
+  /* header section */
+
+  .heading-light {
+    display: block;
+    color: var(--grey-400);
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  .feature-header {
+    max-width: 498px;
+  }
+
+  .heading-bold {
+    display: block;
+    color: var(--grey-500);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.25em;
+  }
+
+  .description {
+    color: var(--grey-400);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  /* feature card section */
+
+  .feature-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    max-width: 296px;
+    padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0, 0.25);
+  }
+
+  .feature-title {
+    color: var(--grey-500);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .feature-overview {
+    color: var(--grey-400);
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  .feature-img {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 296px;
+    gap: 2rem;
+    flex-shrink: 1;
+  }
+
+  .container .feature-card {
+    width: 100%;
+  }
+
+  #supervisor {
+    border-top: 0.25rem solid var(--cyan);
+  }
+
+  #teambuilder {
+    border-top: 0.25rem solid var(--red);
+  }
+
+  #karma {
+    border-top: 0.25rem solid var(--orange);
+  }
+
+  #calculator {
+    border-top: 0.25rem solid var(--blue);
+  }
+
+
+  @media (max-width: 1020px) {
+    .feature-section {
+      flex-direction: column;
+    }
+
+    .heading-light,
+    .heading-bold {
+        font-size: 1.5rem;
+    }
+
+    .feature-header {
+        max-width: 360px;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  
+    .feature-card {
+      max-width: 296px;
+      width: 100%;
+    }
+  }
