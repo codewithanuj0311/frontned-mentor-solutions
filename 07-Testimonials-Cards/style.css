@@ -130,6 +130,7 @@
     .grid {
         row-gap: 2rem;
         column-gap: 0;
+        margin: 4rem 2.25rem;
         grid-template-columns: 1fr;
     }
     #card-1 {
