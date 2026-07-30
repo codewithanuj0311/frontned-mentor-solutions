@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: hsl(217, 19%, 35%);
+    --clr-secondary: hsl(214, 17%, 51%);
+    --clr-muted: hsl(212, 23%, 69%);
+    --clr-bg: hsl(210, 46%, 95%);
+    --white: #fff;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    background-color: var(--clr-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 1.5rem;
+}
+
+.card-container {
+    display: flex;
+    margin: 0 5.5rem;
+    max-width: 730px;
+    border-radius: 0.5rem;
+}
+
+.card-img {
+    width: 40%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.card-content {
+    padding: 2rem 2.5rem;
+    width: 60%;
+    background-color: var(--white);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.card-description {
+    font-size: 0.81rem;
+    color: var(--clr-secondary);
+    font-weight: 500;
+    margin-bottom: 1.75em;
+}
+
+/* footer */
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.card-author {
+    display: flex;
+    gap: 1rem;
+}
+
+.author-img {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    border-radius: 50%;
+}
+
+.author-name {
+    font-size: 0.81rem;
+    color: var(--clr-primary);
+    font-weight: 700;
+}
+
+.published-date {
+    font-size: 0.81rem;
+    color: var(--clr-secondary);
+    font-weight: 500;
+}
+
+/* share toast */
+
+.share-toast {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--clr-primary);
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    display: none;
+    position: absolute;
+    bottom: 148%;
+    right: -104px;
+}
+
+.share-toast.active {
+    display: flex;
+}
+
+.share-toast::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 108px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: var(--clr-primary) transparent transparent transparent;
+}
+
+.share {
+    font-size: 0.81rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: var(--clr-secondary);
+    font-weight: 500;
+}
+
+.share-toast img {
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+}
+
+/* share button */
+
+.share-btn {
+    background-color: var(--clr-bg);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.5s background-color ease;
+
+}
+
+.share-btn.active {
+    background-color: var(--clr-primary);
+}
+
+.share-btn.active svg path {
+    fill: var(--white);
+}
+
+
+.share-btn svg path {
+    fill: var(--clr-primary);
+}
+
+
+/* Media Query */
+
+@media screen and (max-width:780px) {
+    .card-container {
+        flex-direction: column;
+        max-width: 450px;
+        margin: 0;
+    }
+
+    .card-img {
+        width: 100%;
+        object-position: left center;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card-content {
+        width: 100%;
+        padding: 2.5rem 2rem 1rem 2rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        color: var(--clr-primary);
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+    
+    .card-description {
+        margin-bottom: 2.75em;
+    }
+
+    .share-toast {
+        gap: 1.5rem;
+        bottom: -14px;
+        left: -32px;
+        right: -32px;
+        padding: 1.5rem 2.5rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+    
+    .share-toast::after {
+        display: none;
+    }
+
+    .share-btn.active {
+        background-color: var(--clr-secondary);
+    }
+    
+    
+}
+
+
+@media screen and (min-width:781px) and (max-width:1440px) {
+    .card-container {
+        max-width: 600px;
+    }
+
+
+    .card-img {
+        object-position: center;
+    }
+
+    .card-content {
+        padding: 2.5rem 2rem;
+    }
+}
+
+
+
