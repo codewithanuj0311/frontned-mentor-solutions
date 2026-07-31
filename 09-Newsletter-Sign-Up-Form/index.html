@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+  <main class="card-container">
+    <section class="card-content">
+      <h1 class="title">Stay updated!</h1>
+      <p class="description">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="feature-list">
+        <li>
+          <span class="img"><img src="./assets/images/icon-list.svg" alt="" srcset=""></span><p class="feature">Product discovery and building what matters</p>
+        </li>
+        <li>
+          <span class="img"><img src="./assets/images/icon-list.svg" alt="" srcset=""></span>
+          <p class="feature">Measuring to ensure updates are a success</p>
+        </li>
+        <li>
+          <span class="img"><img src="./assets/images/icon-list.svg" alt="" srcset=""></span>
+          <p class="feature">And much more!</p>
+        </li>
+      </ul>
+      <form novalidate id="form">
+        <div class="row">
+          <div class="label">
+            <label for="email" class="email">Email address</label>
+            <span class="error hidden"></span>
+          </div>
+          <input type="email" name="email" id="email" placeholder="email@company.com">
+        </div>
+        <button type="submit" class="btn-subscribe">Subscribe to monthly newsletter</button>
+      </form>
+    </section>
+    <picture>
+      <source media="(max-width:600px)" srcset="./assets/images/illustration-sign-up-mobile.svg"
+        class="form-img-mobile">
+      <source media="(min-width:601px) and (max-width:1200px)" srcset="./assets/images/illustration-sign-up-tablet.svg"
+        class="form-img-tablet">
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="sign up form" class="form-img-desktop">
+    </picture>
+  </main>
+
+  <section class="success-popup hidden">
+    <img src="./assets/images/icon-success.svg" alt="" class="success-img">
+    <h1 class="popup-heading">Thanks for subscribing!</h1>
+    <p class="sub-confirmation">A confirmation email has been sent to <strong
+        class="sub-email"></strong>
+      Please open it and click the button inside to confirm your subscription.</p>
+    <button type="button" class="btn-close">Dismiss message</button>
+  </section>
+
+</body>
+
+</html>
